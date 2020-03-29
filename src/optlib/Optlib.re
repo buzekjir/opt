@@ -1,0 +1,1 @@
+let pow2 = (a: int) => {a * a}

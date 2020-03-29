@@ -1,0 +1,1 @@
+let pow2: (int) => int;

@@ -1,0 +1,11 @@
+(library
+    (name Optlib)
+    (public_name optlib.lib)
+    (libraries optlib.internal)
+    (modules optlib)
+)
+(library
+    (name OptlibInternal)
+    (public_name optlib.internal)
+    (modules (:standard \ Optlib))
+)

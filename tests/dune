@@ -1,0 +1,17 @@
+(library
+  (name OptlibTests)
+  (public_name optlib.tests)
+  ; IMPORTANT: -linkall flag is required to include all tests.
+  (ocamlopt_flags -linkall -g)
+  (libraries optlib.lib optlib.internal console.lib)
+  (modules (:standard \ TestDev))
+)
+(executable
+  (package tests)
+  (name TestDev)
+  (public_name TestDev.exe)
+  (libraries
+    OptlibTests console.lib
+  )
+  (modules TestDev)
+)
