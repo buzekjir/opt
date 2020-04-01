@@ -1,0 +1,17 @@
+(library
+  (name OptlibUnitTests)
+  (public_name optlib.unittests)
+  ; IMPORTANT: -linkall flag is required to include all tests.
+  (ocamlopt_flags -linkall -g)
+  (libraries rely.lib optlib.lib optlib.internal)
+  (modules (:standard \ UnitTests))
+)
+(executable
+  (package unittests)
+  (name UnitTests)
+  (public_name UnitTests.exe)
+  (libraries
+    OptlibUnitTests
+  )
+  (modules UnitTests)
+)

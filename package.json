@@ -11,7 +11,11 @@
     "release": { "bin": [ "Hello" ] },
     "buildEnv": { "ODOC_SYNTAX": "re" }
   },
-  "scripts": { "test": "esy x Hello", "doc": "esy dune build @doc", "build-tests": "esy b dune build tests/TestDev.exe"},
+  "scripts": {
+    "test": "esy x Hello", 
+    "doc": "esy dune build @doc",
+    "build-tests": "esy b dune build tests/TestDev.exe",
+    "build-unit-tests" : "esy b dune build unittest/UnitTests.exe"},
   "dependencies": {
     "@esy-ocaml/reason": ">= 3.4.0 < 3.6.0",
     "@opam/dune": "*",
